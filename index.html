@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Uos Ver.test.1.0</title>
+<link rel="stylesheet" href="base.css">    
+</head>
+<body>
+<p id="close"><img src="option/img/batsu.gif" alt="閉じる" height="32px" width="32px"></p>
+<div id="option">
+    <p><a><img src="img/ei-settings.png" alt="設定" width="120px" height="120px"></a></p>
+</div>  
+<div id="openoption">
+    <h1>PC設定</h1>
+    <p id="p1">言語</p>
+    <p id="audioBtn1">音オン</p>
+    <p id="audioBtn2">音オフ</p>
+</div>
+<div id="Google">
+    <p><a href="https://google.com" target="_blank" rel="noopener"><img src="img/IhlhyWsq_400x400.jpg" alt="Google" height="120px" width="120px;"></a></p>
+</div>
+<div id="finder">
+    <p><a><img src="img/blue_download_alt_folder_12391.png"></a></p>
+</div>
+<div id="openfinder">
+    <p>ファインダー</p>
+    <p id="Storage"></p>
+</div>
+</body>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>    
+
+<script>
+    //変数
+    var audio =1;
+    var storage = 3;
+    var newaudio = new Audio('media/a.mp3');
+    
+    //オプション開く
+    $('#option').click(function(){
+        $('#option').hide();
+        $('#Google').hide();
+        $('#finder').hide();
+        $('#openoption').show();
+        $('#close').show();
+    })
+    
+    //ファインダーを開く
+    $('#finder').click(function(){
+        $('#option').hide();
+        $('#Google').hide();
+        $('#finder').hide();
+        $('#openfinder').show();
+        $('#close').show();
+        $('#Storage').text('PCストレージ ' + storage + '/1.0MB')
+    })
+    
+    //閉じる
+    $('#close').click(function(){
+        $('#openoption').hide();
+        $('#close').hide();
+        $('#openfinder').hide();
+        $('#option').show();
+        $('#Google').show();
+        $('#finder').show();
+    })
+    
+    //設定音量
+    $('#audioBtn1').click(function(){
+        newaudio.volume = 1.0;
+        alert('音量を100にしました')
+        newaudio.play();
+    })
+    $('#audioBtn2').click(function(){
+        newaudio.volume = 0;
+        alert('音量を0にしました')
+        newaudio.play();
+    })
+</script>
+</html>

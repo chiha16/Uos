@@ -1,0 +1,71 @@
+body {
+    background-image: url(img/1279944_s.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#option {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#openoption {
+    text-align: center;
+    width: 1000px;
+    height: 500px;
+    background: #fff;
+    color: #000;
+    position: absolute;
+    display: none;
+}
+
+#p1 {
+    height: auto;
+    width: auto;
+    background: #FF0;
+}
+
+#audio,
+#option,
+#close,
+#Google,
+#audioBtn1,
+#audioBtn2,
+#finder:hover {
+    cursor: pointer;
+}
+
+#close {
+    position: absolute;
+    left: 972px;
+    z-index: 1000;
+    display: none;
+}
+
+#Google {
+    position: absolute;
+    top: 160px;
+    left: 20px;
+}
+
+#audioBtn1,
+#audioBtn2{
+    background: #FF5F17;
+    color: #fff;
+}
+
+#finder {
+    position: absolute;
+    top: 300px;
+    left: 20px;
+}
+
+#openfinder {
+    text-align: center;
+    width: 1000px;
+    height: 500px;
+    background: #fff;
+    color: #000;
+    display: none;
+}
